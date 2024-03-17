@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+<h1>Search Todo</h1>
+<form action="/todo/search" method="get">
+    Search Task: <input type="text" name="task"><br>
+    <input type="submit" value="Search">
+</form>
+<ul>
+    <li th:each="todo : ${searchResults}">
+        <span th:text="${todo.task}"></span> -
+        <span th:text="${todo.description}"></span> -
+        <span th:text="${todo.isDone ? 'Done' : 'Not Done'}"></span> -
+        <span th:text="${todo.createdAt}"></span>
+    </li>
+</ul>
+</body>
+</html>

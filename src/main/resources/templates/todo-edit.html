@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<h1>Edit Todo</h1>
+<form action="/todo/edit/{id}" method="post">
+    Task: <input type="text" name="task" th:value="${todo.task}"><br>
+    Description: <input type="text" name="description" th:value="${todo.description}"><br>
+    Is Done: <input type="checkbox" name="isDone" th:checked="${todo.isDone}"><br>
+    <input type="submit" value="Save Changes">
+</form>
+</body>
+</html>

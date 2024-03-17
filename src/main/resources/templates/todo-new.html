@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new to do</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="text"], input[type="checkbox"], input[type="submit"] {
+            width: 80%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="checkbox"] {
+            width: auto;
+        }
+        input[type="submit"] {
+            background-color: blueviolet;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #8a2be2;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Add New Todo</h1>
+    <form action="/todo/new" method="post">
+        <label for="task">Task:</label>
+        <input type="text" id="task" name="task">
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description">
+
+        <label for="isDone">Is Done:</label>
+        <input type="checkbox" id="isDone" name="isDone">
+
+        <input type="submit" value="Add Todo">
+    </form>
+</div>
+</body>
+</html>
